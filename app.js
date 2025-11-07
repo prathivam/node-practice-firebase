@@ -4,6 +4,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
+app.set('view engine', 'pug')
+// If Views Folder was renamed to something else.
+app.set('views', 'views');
+
 
 const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
